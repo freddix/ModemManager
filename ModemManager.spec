@@ -1,11 +1,11 @@
 Summary:	Mobile broadband modem management service
 Name:		ModemManager
-Version:	1.2.0
+Version:	1.4.0
 Release:	1
 License:	GPL v2+
 Group:		Networking
 Source0:	http://www.freedesktop.org/software/ModemManager/%{name}-%{version}.tar.xz
-# Source0-md5:	6e70ab7c5f96aa6a4d5612c1d5ae5bb3
+# Source0-md5:	4f78b31c23828dc1037352d6dbb608db
 URL:		http://www.freedesktop.org/wiki/Software/ModemManager
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -128,6 +128,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/%{name}/libmm-plugin-wavecom.so
 %attr(755,root,root) %{_libdir}/%{name}/libmm-plugin-x22x.so
 %attr(755,root,root) %{_libdir}/%{name}/libmm-plugin-zte.so
+%{_prefix}/lib/udev/rules.d/77-mm-cinterion-port-types.rules
 %{_prefix}/lib/udev/rules.d/77-mm-ericsson-mbm.rules
 %{_prefix}/lib/udev/rules.d/77-mm-huawei-net-port-types.rules
 %{_prefix}/lib/udev/rules.d/77-mm-longcheer-port-types.rules
